@@ -1,0 +1,21 @@
+.form-group {
+    margin: 20px 0;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-group-item button {
+    margin-left: auto;
+}
