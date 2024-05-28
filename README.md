@@ -52,3 +52,15 @@ This is a simple Flask web application for managing notes. Users can sign up, lo
 - Sign up for a new account or log in if you already have one.
 - Add notes using the text area and "Add Notes" button.
 - Delete notes by clicking the close button next to each note.
+
+## Security Measures
+
+This Flask web application incorporates several security measures to ensure data integrity and user privacy:
+
+- **Password Hashing:** User passwords are securely hashed using `pbkdf2:sha256` with Werkzeug's `generate_password_hash` function before being stored in the database, preventing plain text password storage.
+- **User Authentication:** User authentication is handled using Flask-Login, which ensures that only authenticated users can access protected routes.
+- **Cross-Site Request Forgery (CSRF) Protection:** CSRF protection is implemented using Flask-WTF (if used), ensuring that all form submissions are protected against cross-site request forgery attacks.
+- **Input Validation:** Input fields are validated on both the client and server sides to prevent malicious data entry.
+- **Secure Session Management:** Flask's session management is used to maintain secure user sessions.
+
+These measures help to secure user data and protect the application from common web vulnerabilities.
